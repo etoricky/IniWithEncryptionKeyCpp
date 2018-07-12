@@ -161,7 +161,6 @@ private:
 			if (0 == pos) {  // 行的第一个字符就是注释字符
 				return false;
 			}
-			end_pos = pos - 1;
 		}
 		std::string new_line = line.substr(start_pos, start_pos + 1 - end_pos);  // 预处理，删除注释部分
 
