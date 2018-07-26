@@ -9,6 +9,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <regex>
+#include <algorithm>
 
 class Config {
 public:
@@ -134,7 +135,7 @@ public:
 		}
 
 		// Add the last one
-		strs.push_back(txt.substr(initialPos, std::min(pos, txt.size()) - initialPos + 1));
+		strs.push_back(txt.substr(initialPos, min(pos, txt.size()) - initialPos + 1));
 
 		return strs;
 	}
